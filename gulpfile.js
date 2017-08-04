@@ -8,9 +8,7 @@ gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.+(scss|sass)')// Gets all files ending with .scss and .sass in app/scss and children dirs
 				.pipe(sass()) // Convert Sass to CSS with gulp-sass
 				.pipe(gulp.dest('app/css'))
-				.pipe(browserSync.reload({
-					stream: true, 
-				}))
+				.pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('browserSync', function() {
@@ -20,11 +18,12 @@ gulp.task('browserSync', function() {
 		{
 			baseDir: 'app'
 		},
+		notify: false
 	});
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function() {
-	gulp.watch('app/scss/**/*.+(scss|sass)', ['sass', browserSync.reload]);
+	gulp.watch('app/scss/**/*.+(scss|sass)', ['sass']);
 	// Reloads the browser whenever HTML or JS files change
   gulp.watch('app/*.html', browserSync.reload); 
   gulp.watch('app/js/**/*.js', browserSync.reload); 

@@ -1,7 +1,7 @@
-body {
-  background: cyan; }
-
 div > p {
-  color: red;
+  color: green;
   display: block;
   text-align: center; }
+
+div + p {
+  color: red; }
