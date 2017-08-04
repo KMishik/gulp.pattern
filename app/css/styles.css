@@ -1,0 +1,7 @@
+body {
+  background: cyan; }
+
+div > p {
+  color: red;
+  display: block;
+  text-align: center; }
