@@ -1,76 +1,102 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>CSS Typography</title>
-<link href="css/styles.css" rel="stylesheet">
+<meta charset="ISO-8859-1">
+<title>CosmoFarmer</title>
 <style>
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+/* end reset browser styles */
 
-	a {
-		color: #207EBF;
-		text-decoration: none;
-		font-weight: bold;
-		border-bottom: 2px solid #F60;
-	}
-	a:visited {
-		color: #6E97BF;
-	}
-	a:hover {
-		color: #FFF;
-		background-color: #6E97BF;
-		border-bottom-color: #6E97BF;
-	}
-	a[href^="mailto:"] {
-		color: #666666;
-		border: none;
-		background: url(images/email.gif) no-repeat left center;
-		padding-left: 20px;
-		margin-left: 10px;
-	}
-	.resources a {
-		border-bottom: none;
-		padding-right: 22px;
-	}
-	.resources a[href*="://"] {
-		background: url(images/globe.png) no-repeat right center;
-	}
-	.resources a[href$=".pdf"] {
-		background: url(images/acrobat.png) no-repeat right center;
-	}
-	.resources a[href$=".zip"] {
-		background: url(images/zip.png) no-repeat right center;
-	}
-	.resources a[href$=".doc"] {
-		background: url(images/word.png) no-repeat right center;
-	}
-	.resources a:hover {
-		color: #000;
-		background-color: rgba(255,255,255,.8);
-	}
+/* BASIC */
+body {
+	font: 62.5% Verdana, Arial, Helvetica, sans-serif;
+	padding: 20px;
+}
+.mainNav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 175px;
+}
+.mainNav a {
+	color: #000;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 1px dashed #999;
+	border-bottom: none;
+	padding: 7px 5px 7px 30px;
+	display: block;
+	background-color: #e7e7e7;
+	background-image: url(images/nav.png);
+	background-repeat: no-repeat;
+	background-position: 0 2px;
+}
+.mainNav .homeLink {
+	background-image: url(images/home.png);
+}
+.mainNav li:last-of-type a {
+	border-bottom: 1px dashed #999;
+}
+.mainNav a:hover {
+	font-weight: bold;
+	background-color: #B2F511;
+	background-position: 3px 50%;
+}
+.home .homeLink,
+.feature .featureLink,
+.expert .expertLink,
+.quiz .quizLink,
+.project .projectLink,
+.horoscope .horoscopeLink {
+	background-color: #ffffff;
+	background-position: 97% 100%;
+	padding-right: 15px;
+	padding-left: 30px;
+	font-weight: bold;
+}
+.home a.homeLink {
+	background-image: url(images/nav.png);
+}
 
-</style>	
+</style>
 </head>
-
-<body>
-<div class="main">
-<h1><strong>CSS</strong> The Missing Manual</h1>
-<h2>Exploring Typographic Possibilities</h2>
-<p class="byline">november 30 <strong>Rod Dibble</strong></p>
-<div class="resources">
-<h3> Resources</h3>
-<ul>
-  <li><a href="report.pdf">Annual Report</a></li>
-  <li><a href="template.doc">Corporate Word Template</a></li>
-  <li><a href="logos.zip">Corporate Graphics</a></li>
-  <li><a href="https://www.yahoo.com/">Parent Corporate Site</a></li>
-  <li><a href="https://www.google.com/">More Links</a></li>
-</ul>
-</div>
-<h3>Esse quam nulla</h3>
-<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? <a href="test.html">Quis autem vel eum</a> iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi <a href="test2.html">ut aliquid ex ea commodi</a> consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-<h3>Quis autem vel eum</h3>
-<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illu <a href="test3.html">qui dolorem eum</a> fugiat quo voluptas nulla pariatur? Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-<p class="legal">Copyright 2015 <a href="mailto:css@cosmofarmer.com">E-mail comments to css@cosmofarmer.com</a></p>
-</div>
+<body class="">
+  <ul class="mainNav">
+    <li><a href="/index.html" class="homeLink">Home</a></li>
+    <li><a href="/features/" class="featureLink">Features</a></li>
+    <li><a href="/experts/" class="expertLink">Experts</a></li>
+    <li><a href="/quiz/" class="quizLink">Quiz</a></li>
+    <li><a href="/projects/" class="projectLink">Projects</a></li>
+    <li><a href="/horoscopes/" class="horoscopeLink">Horoscopes</a></li>
+  </ul>
 </body>
 </html>
